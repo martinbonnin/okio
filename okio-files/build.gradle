@@ -41,3 +41,10 @@ kotlin {
     }
   }
 }
+
+jvmTest {
+  testLogging {
+    exceptionFormat "full"
+    showStandardStreams = true
+  }
+}

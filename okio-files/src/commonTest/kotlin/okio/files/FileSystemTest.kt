@@ -38,7 +38,6 @@ class FileSystemTest {
     if (this == null) throw IllegalStateException("here2")
   }.toString()
 
-
   @Test
   fun baseDirectory() {
     val cwd = Filesystem.SYSTEM.baseDirectory()
