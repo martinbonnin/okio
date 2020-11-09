@@ -122,7 +122,6 @@ abstract class Filesystem {
      */
     val SYSTEM: Filesystem
       get() {
-        println("*********************************** " + PLATFORM_FILESYSTEM)
         return PLATFORM_FILESYSTEM
       }
   }
