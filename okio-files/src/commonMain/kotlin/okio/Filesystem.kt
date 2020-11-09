@@ -120,9 +120,6 @@ abstract class Filesystem {
      * The current process's host filesystem. Use this instance directly, or dependency inject a
      * [Filesystem] to make code testable.
      */
-    val SYSTEM: Filesystem
-      get() {
-        return PLATFORM_FILESYSTEM
-      }
+    val SYSTEM: Filesystem = PLATFORM_FILESYSTEM
   }
 }
