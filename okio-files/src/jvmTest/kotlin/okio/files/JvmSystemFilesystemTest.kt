@@ -23,7 +23,6 @@ import kotlin.test.Test
 class JvmSystemFilesystemTest {
   @Test
   fun `base directory consistent with java io File`() {
-    assert(Filesystem.SYSTEM != null)
     assertThat(Filesystem.SYSTEM.baseDirectory().toString())
       .isEqualTo(File("").absoluteFile.toString())
   }
