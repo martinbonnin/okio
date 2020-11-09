@@ -32,7 +32,12 @@ import kotlin.test.assertTrue
 
 /** This test assumes that okio-files/ is the current working directory when executed. */
 class FileSystemTest {
-  private val tmpDirectory = Filesystem.SYSTEM.temporaryDirectory().toString()
+  private val tmpDirectory = Filesystem.SYSTEM.apply {
+    if (this == null) throw IllegalStateException("here1")
+  }.temporaryDirectory().apply {
+    if (this == null) throw IllegalStateException("here2")
+  }.toString()
+
 
   @Test
   fun baseDirectory() {
